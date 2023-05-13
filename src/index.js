@@ -22,8 +22,8 @@
 import React from "react";
 import ReactDom from 'react-dom';
 import './style.css';
+// import {Book} from './Book'
 
-//all variables and object
 const Object1=[
      {
           id:1,
@@ -45,8 +45,6 @@ const Object1=[
      }
 ]
 
-// const array=[1,2,3]
-//main code
 function Books(){
      return (
           <section>
@@ -59,6 +57,7 @@ function Books(){
                          //      <h3>{title}</h3>
                          // </div>
                          <Book {...book}></Book>
+                         
                     )
                })}
           </section>
@@ -68,14 +67,25 @@ function Books(){
 const Book = (props) =>{
      const {id, img, title, author} = props
      console.log(props)
+     const complex = (e) =>{
+          // alert('pkl')
+          alert(e)
+          // console.log(e.target)
+          // alert(e.target)
+     }
      return (
           <article>
                <h3>{id}</h3>
                <img src={img} alt="Parmesh" />
                <h2>{title}</h2>
                <h1>{author}</h1>
+               <button onClick={() => complex()}>Click</button>
           </article>
      );
 }
+
+// const buttonalert = () => {
+     
+// }
 
 ReactDom.render(<Books></Books>, document.getElementById('root'));
