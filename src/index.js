@@ -4,7 +4,7 @@
 // function Greeting() {
 //   return (
 //         <div>
-//     <     Person/>
+//        <Person/>
 //           <Meg/>
 //         </div>
 //           );
